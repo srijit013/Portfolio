@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src="https://kit.fontawesome.com/acc5b553a5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Mechanical Engineer</p>
+            <h1>Hi, I'm Srijit</h1>
+            <a href="Images/Srijit Bashyal_CV.pdf" class="btn">My Resume <i class="fa-solid fa-download"></i></a>
+        </div>
+    </div>
+</div>
+<!--about-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/Prof.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>A responsible and highly motivated Mechanical Engineering student with a circular economy and sustainable mindset. 
+                    I am constantly seeking new challenges and experiences to grow both personally and professionally. 
+                    My proficiency includes SOLIDWORKS, AutoCAD, Finite Elements Modeling and Postprocessing, Fusion 360 and MATLAB.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('expereince')">Education</p>
+                </div> 
+                <div class="tab-contents active-tab" id="skills">
+                    <ul class="multi-column-flexbox">
+                        <li><span>Satellite Systems</span></li>
+                        <li><span>Propulsion</span></li>
+                        <li><span>Data Analysis</span></li>
+                        <li><span>Aerospace</span></li>
+                        <li><span>Dimensioning</span></li>
+                        <li><span>3D Design</span></li>
+                        <li><span>Low-Voltage Engineering</span></li>
+                        <li><span>Autodesk Inventor</span></li>
+                        <li><span>Product Data Management(PDM)</span></li>
+                        <li><span>Electrical Engineering</span></li>
+                        <li><span>3D Modeling</span></li>
+                        <li><span>Modeling and Simulation</span></li>
+                        <li><span>Manufacturing</span></li>
+                        <li><span>Electrical Wiring</span></li>
+                        <li><span>CNC Machining</span></li>
+                        <li><span>Wind Power</span></li>
+                        <li><span>VAWT</span></li>
+                        <li><span>HAWT</span></li>
+                        <li><span>Wind Turbine Design</span></li>
+                        <li><span>MATLAB</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="expereince">
+                    <ul>
+                        <li><span>LUT University (Aug 2021- Dec 2023)</span><br>Bachelor in Technology and Engineering Science, mechanical Engineering</li><br>
+                        <li><span>Everest English Boarding Secondary School (Jul 2018 - Dec 2020)</span><br>High School Education (Science)</li><br>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----Experience----->
+<div id="experience">
+    <div class="container">
+        <h1 class="subtitle">Experience</h1>
+        <div class="services-list">
+            <div>
+                <h2>Engineering Mathematics I & II Teaching Assistant</h2>
+                <p>Sep 2022 - Present</p>
+                <a href="#">Letter of Recommendation</a>
+            </div>
+            <div>
+                <h2>Fluid Mechanics | Teaching Assistant</h2>
+                <p>Jan 2023 - Mar 2023</p>
+                <a href="#">Letter of Recommendation</a>
+            </div>
+            <div>
+                <h2>Basics of Renewable Energy Engineering Teaching Assistant</h2>
+                <p>Mar 2023 - May 2023</p>
+                <a href="#">Letter of Recommendation</a>
+            </div>
+            <div>
+                <h2>Undergraduate Research Assistant</h2>
+                <p>Jun 2023 - Sep 2023</p>
+                <a href="#">Letter of Recommendation</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!----Contact Page-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>srijitbashyal07@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+358 44 9724063</p>
+                <div class="social-icons">
+                    <a href = "https://www.linkedin.com/in/srijit-bashyal-19060a280/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="Images/Bashyal_Srijit_CoverLetter.pdf" class="btn1">CoverLetter</a>
+            </div>
+            <div class="contact-right">
+                <form name = "submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your E-Mail" required>
+                    <textarea name="Message" id="" cols="30" rows = "6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn1 btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Srijit Bashyal 2023. </p>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzPk-DUFnzdjh2yHYbwnDyzL1L_gvK6JH78A8q48g527hO6_adjRMK5aBY3cTvKxZnwPw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Submitted Successully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },3000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html> 
